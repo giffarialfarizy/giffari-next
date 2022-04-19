@@ -8,7 +8,7 @@ $muted: #dbe2ef;
 $light: #f9f7f7;
 $action: #ec8d1d;
 $action-darker: #a15e0e;
-$error: #9f0e30;
+$error: #aa2562;
 $success: #44761a;
 
 // Spacing
@@ -20,6 +20,10 @@ $padding-base: 0.75rem;
 // Border
 $border-width-base: 1px;
 $border-radius-base: 5px;
+
+// Shadow
+$shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1),
+	0 1px 2px -1px rgb(0 0 0 / 0.1);
 
 * {
 	box-sizing: border-box;
@@ -100,6 +104,15 @@ ul {
 	cursor: pointer;
 }
 
+.button-action {
+	color: $light;
+	border: $border-width-base solid $action;
+	background-color: $action;
+	border-radius: $border-radius-base;
+	padding: $padding-base;
+	cursor: pointer;
+}
+
 .button-outline-primary {
 	color: $primary;
 	border: $border-width-base solid $primary;
@@ -107,6 +120,24 @@ ul {
 	border-radius: $border-radius-base;
 	padding: $padding-base;
 	cursor: pointer;
+}
+
+.button-ghost {
+	color: $primary;
+	border: 0;
+	background-color: transparent;
+	border-radius: $border-radius-base;
+	padding: $padding-base;
+	cursor: pointer;
+}
+
+.card {
+	color: $primary;
+	background-color: #fff;
+	border-radius: $border-radius-base;
+	padding: $padding-base;
+	width: fit-content;
+	box-shadow: $shadow;
 }
 
 .mr-4 {

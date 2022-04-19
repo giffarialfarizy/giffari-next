@@ -54,14 +54,16 @@ const Home: NextPage = () => {
 
 				<div className='error'>Error message</div>
 				<div className='success'>Success message</div>
-				<button className='button-outline-primary mr-4'>
+				<button className='button-ghost'>Ghost</button>
+				<button className='button-outline-primary'>
 					Cancel
 				</button>
 				<button className='button-primary'>Submit</button>
+				<button className='button-action'>Action</button>
 
 				<hr />
 
-				<div style={{ backgroundColor: 'white' }}>ABC</div>
+				<div className='card'>ABC DEF GHI JKL MNO PQR</div>
 				<p className='paragraph'>Reference:</p>
 				<a href='https://medium.com/yardcouch-com/elon-musk-people-dont-realize-what-s-coming-b5a172672bd8'>
 					Elon Musk: People Don’t Realize What’s Coming
