@@ -1,0 +1,12 @@
+.container {
+	padding-left: 2rem;
+	max-width: 45rem;
+}
+
+.blog p {
+	font-size: 1.125rem;
+	font-weight: 400;
+	line-height: 1.75rem;
+	margin-top: $margin-paragraph;
+	color: $error;
+}

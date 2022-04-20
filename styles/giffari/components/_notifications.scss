@@ -1,0 +1,21 @@
+.error {
+	color: $error;
+	font-weight: 600;
+	border-color: $error;
+	border-style: solid;
+	margin: $margin-base;
+	padding: $padding-base;
+	border-radius: $border-radius-base;
+	border-width: $border-width-base;
+}
+
+.success {
+	color: $success;
+	font-weight: 600;
+	border-color: $success;
+	border-style: solid;
+	margin: $margin-base;
+	padding: $padding-base;
+	border-radius: $border-radius-base;
+	border-width: $border-width-base;
+}

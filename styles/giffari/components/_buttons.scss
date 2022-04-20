@@ -1,0 +1,35 @@
+.button-primary {
+	color: $light;
+	border: $border-width-base solid $primary;
+	background-color: $primary;
+	border-radius: $border-radius-base;
+	padding: $padding-base;
+	cursor: pointer;
+}
+
+.button-action {
+	color: $light;
+	border: $border-width-base solid $action;
+	background-color: $action;
+	border-radius: $border-radius-base;
+	padding: $padding-base;
+	cursor: pointer;
+}
+
+.button-outline-primary {
+	color: $primary;
+	border: $border-width-base solid $primary;
+	background-color: transparent;
+	border-radius: $border-radius-base;
+	padding: $padding-base;
+	cursor: pointer;
+}
+
+.button-ghost {
+	color: $primary;
+	border: 0;
+	background-color: transparent;
+	border-radius: $border-radius-base;
+	padding: $padding-base;
+	cursor: pointer;
+}
