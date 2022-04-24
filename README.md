@@ -60,6 +60,17 @@ $colors: (
 
 ### [10. Conditionals (@if)](https://youtu.be/QPZOvED3N_8)
 
+```css
+@if ($val != black and $val !=white) {
+	/* Light variations */
+	@for $i from 1 through 9 {
+		.bg-#{$key}-light-#{$i} {
+			background-color: mix(white, $val, $i * 10);
+		}
+	}
+}
+```
+
 ## Edit Project
 
 ### Clone
