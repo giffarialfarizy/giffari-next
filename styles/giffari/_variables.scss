@@ -9,6 +9,21 @@ $action-darker: #a15e0e;
 $error: #aa2562;
 $success: #44761a;
 
+// Color Palette
+$colors: (
+	'text': $text,
+	'primary': $primary,
+	'secondary': $secondary,
+	'muted': $muted,
+	'light': $light,
+	'action': $action,
+	'action-darker': $action-darker,
+	'error': $error,
+	'success': $success,
+	'white': white,
+	'black': black,
+);
+
 // Spacing
 $margin-base: 0.75rem;
 $margin-paragraph: 1.75rem;

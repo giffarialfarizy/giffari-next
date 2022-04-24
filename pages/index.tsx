@@ -15,6 +15,32 @@ const Home: NextPage = () => {
 
 			<main>
 				<h1>Giffari Alfarizy</h1>
+				<div>
+					<span className='bg-primary text-white'>
+						Primary
+					</span>
+					<span className='bg-success text-white'>
+						Success
+					</span>
+				</div>
+				<div>
+					<span className='bg-primary'>Base</span>
+					<span className='bg-primary-light-2'>
+						Light 2
+					</span>
+					<span className='bg-primary-light-4'>
+						Light 4
+					</span>
+					<span className='bg-primary-light-6'>
+						Light 6
+					</span>
+					<span className='bg-primary-light-8'>
+						Light 8
+					</span>
+					<span className='bg-primary-light-9'>
+						Light 10
+					</span>
+				</div>
 				<section className='blog'>
 					<h2>Title</h2>
 					<p className='paragraph'>

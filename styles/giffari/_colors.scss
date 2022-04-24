@@ -1,0 +1,15 @@
+@each $key, $val in $colors {
+	.bg-#{$key} {
+		background-color: $val;
+	}
+	.text-#{$key} {
+		color: $val;
+	}
+
+	// Light variation
+	@for $i from 1 through 9 {
+		.bg-#{$key}-light-#{$i} {
+			background-color: mix(white, $val, $i * 10);
+		}
+	}
+}
