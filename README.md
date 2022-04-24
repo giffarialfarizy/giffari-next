@@ -13,9 +13,33 @@ border-radius: math.div($border-radius-base, 4);
 
 ### [8. Maps](https://youtu.be/La8wN7o-cL8)
 
+map-get($colors, "purple");
+map-has-key($colors, "secondary");
+map-remove($colors, "primary");
+map-merge($colors, ("pink": #ffc0cb));
+
+Color Palette
+
+```css
+$colors: (
+	'text': $text,
+	'primary': $primary,
+	'secondary': $secondary,
+	'muted': $muted,
+	'light': $light,
+	'action': $action,
+	'action-darker': $action-darker,
+	'error': $error,
+	'success': $success,
+	'white': white,
+	'black': black
+);
+```
+
 ### [9. Loops](https://youtu.be/I1lp8eSKmEs)
 
 @each
+@for
 
 ```css
 @each $key, $val in $colors {
@@ -26,7 +50,6 @@ border-radius: math.div($border-radius-base, 4);
 		color: $val;
 	}
 
-	// Light variation
 	@for $i from 1 through 9 {
 		.bg-#{$key}-light-#{$i} {
 			background-color: mix(white, $val, $i * 10);
