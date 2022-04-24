@@ -43,36 +43,34 @@ const Home: NextPage = () => {
 				</div>
 				<section className='blog'>
 					<h2>Title</h2>
-					<p className='paragraph'>
-						Let’s talk about the future.
-					</p>
-					<p className='paragraph'>
+					<p>Let’s talk about the future.</p>
+					<p>
 						I like the idea of decentralization amongst
 						nations and want all countries to be as
 						autonomous as possible; however, let’s say that
 						we enter interstellar space and we discover
 						there are hundreds of alien civilizations.
 					</p>
-					<p className='paragraph'>
+					<p>
 						Well, I don’t know about you but *someone* on
 						Earth needs to be in charge and it sure as hell
 						isn’t going to be a planet full-on
 						individualism!
 					</p>
-					<p className='paragraph'>
+					<p>
 						In order to present a respectable image in the
 						galactic playing field, we would need to
 						represent our planet and our species, not our
 						particular island.
 					</p>
-					<p className='paragraph'>
+					<p>
 						And this is where Tesla CEO Elon Musk sees
 						humanity’s biggest problem. Musk believes that
 						by the time we realize we should pool our
 						resources and unite, it’ll be all too late
 					</p>
 
-					<p className='paragraph'>
+					<p>
 						“I wonder how many dead ‘one planet’
 						civilizations there are out there in the cosmos?
 						Species that never made it to another planet and
@@ -93,7 +91,7 @@ const Home: NextPage = () => {
 				<hr />
 
 				<div className='card'>ABC DEF GHI JKL MNO PQR</div>
-				<p className='paragraph'>Reference:</p>
+				<p>Reference:</p>
 				<a href='https://medium.com/yardcouch-com/elon-musk-people-dont-realize-what-s-coming-b5a172672bd8'>
 					Elon Musk: People Don’t Realize What’s Coming
 				</a>
