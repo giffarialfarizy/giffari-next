@@ -71,6 +71,16 @@ $colors: (
 }
 ```
 
+### [11. Parent Selectors](https://youtu.be/unhOp1Z-hec)
+
+```css
+.text-hover-light {
+	&:hover {
+		color: mix(white, purple, 20);
+	}
+}
+```
+
 ## Edit Project
 
 ### Clone
