@@ -1,7 +1,7 @@
-import React, { ReactElement, useState } from 'react';
+import React, { ReactElement, useContext } from 'react';
 import LayoutMain from '../layouts/MainLayout';
 
-import { starterPokemon } from '../data/pokemon';
+import { PokemonContext } from '../context/PokemonContext';
 
 type pokemonType = {
 	number: string;
@@ -10,62 +10,20 @@ type pokemonType = {
 };
 
 const TablePage = () => {
-	const [pokemonList, setPokemonList] =
-		useState<pokemonType[]>(starterPokemon);
-
-	const [currentIndex, setCurrentIndex] = useState(-1);
-
-	const initialInput = {
-		number: '',
-		name: '',
-		type: '',
-	};
-
-	const [input, setInput] =
-		useState<pokemonType>(initialInput);
-
-	const handleChange = (
-		e: React.FormEvent<HTMLInputElement>
-	) => {
-		let name = e.currentTarget.name;
-		let value = e.currentTarget.value;
-		setInput({
-			...input,
-			[name]: value,
-		});
-	};
-
-	const handleEdit = (e: any) => {
-		let index = parseInt(e.currentTarget.value);
-		let itemToBeChanged = pokemonList[index];
-		setCurrentIndex(index);
-		setInput(itemToBeChanged);
-	};
-
-	const handleDelete = (e: any) => {
-		let index = parseInt(e.currentTarget.value);
-		let itemToBeDeleted = pokemonList[index];
-		let newList = pokemonList.filter(e => {
-			return e !== itemToBeDeleted;
-		});
-		setPokemonList(newList);
-	};
-
-	const handleSubmit = (e: any) => {
-		e.preventDefault();
-		let newList = pokemonList;
-		if (currentIndex === -1) {
-			newList = [...pokemonList, input];
-		} else {
-			newList[currentIndex] = input;
-		}
-		setPokemonList(newList);
-		setInput(initialInput);
-		setCurrentIndex(-1);
-	};
+	const {
+		pokemonList,
+		input,
+		handleChange,
+		handleEdit,
+		handleDelete,
+		handleSubmit,
+	} = useContext(PokemonContext);
 
 	return (
 		<div className='container'>
+			<div>
+				Context <span>{pokemonList[0].name}</span>
+			</div>
 			{/* Tabel */}
 			<section>
 				<h2>Table</h2>
@@ -80,29 +38,31 @@ const TablePage = () => {
 					</thead>
 					<tbody>
 						{pokemonList &&
-							pokemonList.map((item, index) => {
-								return (
-									<tr key={item.number}>
-										<td>{item.number}</td>
-										<td>{item.name}</td>
-										<td>{item.type}</td>
-										<td>
-											<button
-												onClick={handleEdit}
-												value={index}
-											>
-												Edit
-											</button>
-											<button
-												onClick={handleDelete}
-												value={index}
-											>
-												Delete
-											</button>
-										</td>
-									</tr>
-								);
-							})}
+							pokemonList.map(
+								(item: any, index: number) => {
+									return (
+										<tr key={item.number}>
+											<td>{item.number}</td>
+											<td>{item.name}</td>
+											<td>{item.type}</td>
+											<td>
+												<button
+													onClick={handleEdit}
+													value={index}
+												>
+													Edit
+												</button>
+												<button
+													onClick={handleDelete}
+													value={index}
+												>
+													Delete
+												</button>
+											</td>
+										</tr>
+									);
+								}
+							)}
 					</tbody>
 				</table>
 
