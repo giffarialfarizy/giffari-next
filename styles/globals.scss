@@ -1,1 +1,10 @@
 @import 'giffari';
+
+// sementara
+.navbar {
+	ul {
+		display: flex;
+		gap: 1rem;
+		color: $success;
+	}
+}

@@ -1,7 +1,10 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import Link from 'next/link';
+import { ReactElement } from 'react';
+import LayoutMain from '../layouts/MainLayout';
 
-const Home: NextPage = () => {
+const Home = () => {
 	return (
 		<div className='container'>
 			<Head>
@@ -101,3 +104,7 @@ const Home: NextPage = () => {
 };
 
 export default Home;
+
+Home.getLayout = function getLayout(page: ReactElement) {
+	return <LayoutMain>{page}</LayoutMain>;
+};
