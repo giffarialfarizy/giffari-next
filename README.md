@@ -2,7 +2,7 @@
 
 ## Catatan Development
 
-### [Sass](Sass.md)
+### [Sass](documentation/Sass.md)
 
 ## Edit Project
 
