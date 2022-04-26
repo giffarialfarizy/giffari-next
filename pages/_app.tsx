@@ -1,7 +1,6 @@
 import type { ReactElement, ReactNode } from 'react';
 import type { NextPage } from 'next';
 import type { AppProps } from 'next/app';
-import { PokemonWrapper } from '../context/PokemonContext';
 import '../styles/globals.scss';
 
 type NextPageWithLayout = NextPage & {
@@ -18,9 +17,5 @@ export default function MyApp({
 }: AppPropsWithLayout) {
 	const getLayout = Component.getLayout ?? (page => page);
 
-	return getLayout(
-		<PokemonWrapper>
-			<Component {...pageProps} />
-		</PokemonWrapper>
-	);
+	return getLayout(<Component {...pageProps} />);
 }

@@ -11,8 +11,8 @@ const Navbar = () => {
 						</Link>
 					</li>
 					<li>
-						<Link href='/table'>
-							<a>Table</a>
+						<Link href='/pokemon'>
+							<a>Pokemon</a>
 						</Link>
 					</li>
 				</ul>
